@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfiex4qj42un"]
+
+[ext_resource type="PackedScene" uid="uid://ery5bsuo1nb2" path="res://sences/player_dasher.tscn" id="1_2hvkd"]
+
+[node name="test world" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1532.0
+offset_top = 438.0
+offset_right = 2088.0
+offset_bottom = 1162.0
+
+[node name="player_dasher" parent="." instance=ExtResource("1_2hvkd")]
+position = Vector2(351, 222)

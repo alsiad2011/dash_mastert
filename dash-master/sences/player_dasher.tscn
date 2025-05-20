@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://ery5bsuo1nb2"]
+[gd_scene load_steps=6 format=3 uid="uid://ery5bsuo1nb2"]
+
+[ext_resource type="Texture2D" uid="uid://bgdjed2ctace0" path="res://assets/simple player.png" id="1_5a06e"]
+[ext_resource type="Script" uid="uid://icvinpy1g65u" path="res://scripts/player_dasher.gd" id="1_v5cw4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5cw4"]
+size = Vector2(1061.47, 131.948)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1v3md"]
+radius = 206.0
+height = 650.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ihv7"]
+radius = 64.7611
 
 [node name="player_dasher" type="CharacterBody2D"]
+script = ExtResource("1_v5cw4")
+
+[node name="SimplePlayer" type="Sprite2D" parent="."]
+texture = ExtResource("1_5a06e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(19, 189)
+rotation = 2.74889
+shape = SubResource("RectangleShape2D_v5cw4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(25, -189)
+rotation = 0.392699
+shape = SubResource("RectangleShape2D_v5cw4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-37, -4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1v3md")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-442, 398)
+rotation = 1.19487
+shape = SubResource("CircleShape2D_5ihv7")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-446, -391)
+rotation = 1.19487
+shape = SubResource("CircleShape2D_5ihv7")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(490, 1)
+rotation = 1.19487
+shape = SubResource("CircleShape2D_5ihv7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
